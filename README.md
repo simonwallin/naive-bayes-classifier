@@ -23,7 +23,7 @@ from naiveBayesClassifier import tokenizer
 from naiveBayesClassifier.trainer import Trainer
 from naiveBayesClassifier.classifier import Classifier
 
-newsTrainer = Trainer(tokenizer)
+newsTrainer = Trainer(tokenizer.Tokenizer())
 
 # You need to train the system passing each text one by one to the trainer module.
 newsSet =[
@@ -40,7 +40,7 @@ for news in newsSet:
 
 # When you have sufficient trained data, you are almost done and can start to use
 # a classifier.
-newsClassifier = Classifier(newsTrainer.data, tokenizer)
+newsClassifier = Classifier(newsTrainer.data, tokenizer.Tokeniizer())
 
 # Now you have a classifier which can give a try to classifiy text of news whose
 # category is unknown, yet.
