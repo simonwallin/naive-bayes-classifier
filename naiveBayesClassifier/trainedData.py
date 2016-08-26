@@ -1,4 +1,4 @@
-from ExceptionNotSeen import NotSeen
+from naiveBayesClassifier.ExceptionNotSeen import NotSeen
 
 
 class TrainedData(object):
@@ -33,7 +33,7 @@ class TrainedData(object):
 
     def getClassDocCount(self, className):
         """
-        returns document count of the class.
+        returns document count of the class. 
         If class is not available, it returns None
         """
         return self.docCountOfClasses.get(className, None)
